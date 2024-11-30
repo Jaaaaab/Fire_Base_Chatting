@@ -1,38 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f2f5;
+  font-family: 'Roboto', sans-serif;
+}
+
 .App {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #6200ea;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+main {
+  padding: 20px;
+  min-height: 80vh;
+}
+
+.auth-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  background-color: #6200ea;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:disabled {
+  background-color: #ddd;
+}
+
+.toggle-auth {
+  margin-top: 10px;
+  background-color: transparent;
+  color: #6200ea;
+  border: none;
+  cursor: pointer;
+}
+
+.sign-out {
+  background-color: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chatroom {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100%;
+}
+
+.messages-container {
+  width: 100%;
+  max-height: 60vh;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.chat-form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.chat-form input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.chat-form button {
+  width: 8%;
+  background-color: #6200ea;
   color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.message {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sent {
+  flex-direction: row-reverse;
+}
+
+.received {
+  background-color: #e1e1e1;
+}
+
+.sent p {
+  background-color: #6200ea;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.received p {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-picture-upload {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.profile-picture-upload input[type="file"] {
+  margin: 10px 0;
+}
+
+.profile-picture-upload button {
+  margin-top: 10px;
+}
+
+.profile-picture-upload img {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
